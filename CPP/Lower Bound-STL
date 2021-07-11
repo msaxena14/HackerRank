@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    
+    vector<int> arr;
+    while(n--){
+        int x;
+        cin>>x;
+        arr.push_back(x);
+    }
+    sort(arr.begin(), arr.end());
+       
+    int q;
+    cin>>q;
+    
+    while(q--){
+        int x;
+        cin>>x;
+        
+        auto index = lower_bound(arr.begin(), arr.end(), x);
+        if (*index == x)
+            cout << "Yes " << index - arr.begin() + 1 << endl;
+        else
+            cout << "No " << index - arr.begin() + 1 << endl;
+    }
+    return 0;
+}
