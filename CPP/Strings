@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    
+    string a,b;
+    cin>>a>>b;
+    
+    int len1 = a.size();
+    int len2 = b.size();
+    
+    cout<<len1<<" "<<len2<<endl;
+    cout<< a + b<<endl;
+
+    swap(a[0], b[0]);
+    for(int i=0; i<len1; i++){
+        cout<<a[i];
+    }
+    cout<<" ";
+    for(int j=0; j<len2; j++){
+        cout<<b[j];
+    }
+  
+    return 0;
+}
