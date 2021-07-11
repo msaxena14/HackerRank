@@ -1,0 +1,31 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() 
+{
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    
+     int a[1000];
+     int i,N;
+
+    cin>>N;
+    for(i=0;i<N;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=N;i>=0;i--)
+    {
+        if(i==N)
+        {
+            continue;
+        }
+        cout<<a[i]<<" ";
+    }
+    
+    return 0;
+}
