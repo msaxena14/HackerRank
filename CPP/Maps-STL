@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int x,q;
+    string y;
+    cin >> q;
+    map <string,int> m;
+    while (q--){
+        cin>>x>>y;
+        switch (x) {
+            case 1: 
+                cin>>x;
+                m[y]+=x; 
+                break;
+            case 2: 
+                m.erase(y); 
+                break;
+            case 3: 
+                cout << m[y] << endl;
+                break;
+        }
+    }
+    return 0;
+}
